@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BullBoard - Redesigned Interface Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/cvsu-logo.png" alt="CvSU Logo">
+                <span>UniFeed</span>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active">
+                    <img src="images/home.png" alt="Home">
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/explore.png" alt="Explore">
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/category.png" alt="Category">
+                    <span>Categories</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/saved.png" alt="Saved">
+                    <span>Saved</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search orgs, events, memos... e.g. org: 'CSHARP' or type:'memo'" />
+                </div>
+                <div class="top-icons">
+                    <button class="icon-btn">
+                        <img src="images/calendar.png" alt="Calendar" />
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="icon-btn notif-btn">
+                        <img src="images/notif.png" alt="Notifications" />
+                        <span class="notif-badge">5</span>
+                    </button>
+                    <div class="notification-panel">
+                        <div class="notification-header">
+                            <h3>Notifications</h3>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-title">New Event: Intramurals 2024</div>
+                            <div class="notification-message">Student Government posted a new event</div>
+                            <div class="notification-time">2 hours ago</div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-title">Programming Workshop Available</div>
+                            <div class="notification-message">Computer Science Society posted a new workshop</div>
+                            <div class="notification-time">1 day ago</div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-title">Event Reminder</div>
+                            <div class="notification-message">Your Programming Workshop is coming up soon!</div>
+                            <div class="notification-time">3 hours ago</div>
+                        </div>
+                    </div>
+                    <button class="icon-btn">
+                        <img src="images/profile.png" alt="Profile" />
+                    </button>
+                </div>
+            </div>
+
+            <section class="posts-section">
+                <div class="posts-header">
+                    <h2>Recent Posts</h2>
+                    <a href="#" class="create-post-btn" onclick="toggleCreatePostDemo()">+ Create Post</a>
+                </div>
+                
+                <div class="post-card">
+                    <div class="post-main">
+                        <div class="post-header">
+                            <img src="images/avatar.png" alt="User Avatar" />
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <strong>System Administrator</strong>
+                                    <span class="org-name">• Administration</span>
+                                </div>
+                                <div class="post-info">
+                                    <span class="category-tag" style="background-color: #1B5E20;">General Events</span>
+                                    <span class="post-type">Announcement</span>
+                                    <span class="post-date">December 15, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3>Welcome to UniFeed!</h3>
+                            <p>This is the official bulletin board system for CvSU Silang Campus. Post your events and announcements here!</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn save-btn">🔖 Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-main">
+                        <div class="post-header">
+                            <img src="images/avatar.png" alt="User Avatar" />
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <strong>John Doe</strong>
+                                    <span class="org-name">• Student Government</span>
+                                </div>
+                                <div class="post-info">
+                                    <span class="category-tag" style="background-color: #2196F3;">Events</span>
+                                    <span class="post-type">Event</span>
+                                    <span class="post-date">December 14, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3>Upcoming Intramurals 2024</h3>
+                            <p>Join us for the annual intramurals! Registration starts next week. Various sports categories available.</p>
+                            <div class="event-details">
+                                <div class="event-date">
+                                    <strong>📅 Event Date:</strong> December 20, 2024 9:00 AM
+                                </div>
+                                <div class="event-location">
+                                    <strong>📍 Location:</strong> CvSU Gymnasium
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn save-btn">🔖 Save</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="orgs-section">
+                <h2>Organizations</h2>
+                <div class="orgs-list">
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Computer Science Society</h3>
+                        <p>Organization for Computer Science students</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Student Government</h3>
+                        <p>Official student government body</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Demo functionality
+        function toggleCreatePostDemo() {
+            const mainContent = document.querySelector('.main-content');
+            
+            // Toggle create post mode
+            mainContent.classList.toggle('create-post-mode');
+            
+            // Update button text
+            const btn = document.querySelector('.create-post-btn');
+            if (mainContent.classList.contains('create-post-mode')) {
+                btn.textContent = '← Back to Home';
+                alert('Create Post Mode Activated!\n\n- Top bar (search, calendar, notifications, profile) is now hidden\n- Sidebar background: #07630a (dark green)\n- Main content background: #0e8711 (green)\n- Ready for post creation interface');
+            } else {
+                btn.textContent = '+ Create Post';
+                alert('Back to Normal Mode\n\n- Top bar is now visible again\n- Background colors restored to normal');
+            }
+        }
+
+        // Notification panel demo
+        document.querySelector('.notif-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const panel = document.querySelector('.notification-panel');
+            panel.classList.toggle('show');
+        });
+
+        // Close notification panel when clicking outside
+        document.addEventListener('click', function(event) {
+            const panel = document.querySelector('.notification-panel');
+            const notifBtn = document.querySelector('.notif-btn');
+            
+            if (panel && panel.classList.contains('show')) {
+                if (!panel.contains(event.target) && !notifBtn.contains(event.target)) {
+                    panel.classList.remove('show');
+                }
+            }
+        });
+
+        // Demo notification interactions
+        document.querySelectorAll('.notification-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.remove('unread');
+                alert('Notification marked as read!');
+            });
+        });
+    </script>
+</body>
+</html>

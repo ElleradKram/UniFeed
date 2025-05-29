@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniFeed - Student Orgs Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- SIDE NAV BAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/cvsu-logo.png" alt="CvSU Logo">
+                <span>UniFeed</span>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active">
+                    <img src="images/home.png" alt="Home">
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/explore.png" alt="Explore">
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/category.png" alt="Category">
+                    <span>Categories</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/saved.png" alt="Saved">
+                    <span>Saved</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- TOP NAV BAR -->
+            <div class="top-icons">
+                <div class="search-container">
+                    <input type="text" placeholder="Search orgs, events, memos... e.g. org: 'CSHARP' or type:'memo'" />
+                </div>
+                <div class="top-icons">
+                    <button class="icon-btn">
+                        <img src="images/calendar.png" alt="Calendar" />
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="icon-btn">
+                        <img src="images/notif.png" alt="Notifications" />
+                        <span class="notif-badge">5</span>
+                    </button>
+                    <button class="icon-btn">
+                        <img src="images/profile.png" alt="Profile" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- POSTS -->
+            <section class="posts-section">
+                <div class="posts-header">
+                    <h2>Recent Posts</h2>
+                    <a href="create_post.php" class="create-post-btn">+ Create Post</a>
+                </div>
+
+                <!-- Sample Post 1 -->
+                <div class="post-card">
+                    <div class="post-voting">
+                        <button class="vote-btn upvote" data-post-id="1" data-type="upvote">▲</button>
+                        <span class="vote-count">15</span>
+                        <button class="vote-btn downvote" data-post-id="1" data-type="downvote">▼</button>
+                    </div>
+                    
+                    <div class="post-main">
+                        <div class="post-header">
+                            <img src="images/avatar.png" alt="User Avatar" />
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <strong>John Doe</strong>
+                                    <span class="org-name">• Computer Science Society</span>
+                                </div>
+                                <div class="post-info">
+                                    <span class="category-tag">Academic</span>
+                                    <span class="post-type">Event</span>
+                                    <span class="post-date">December 15, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <h3>Annual Programming Competition 2024</h3>
+                            <p>Join us for the biggest programming competition of the year! Test your coding skills against the best students from different departments. Prizes worth ₱50,000 await the winners!</p>
+                            <div class="event-date">
+                                <strong>Event Date:</strong> December 20, 2024 9:00 AM
+                            </div>
+                        </div>
+
+                        <div class="post-actions">
+                            <button class="action-btn comment-btn">💬 12 Comments</button>
+                            <button class="action-btn save-btn" data-post-id="1">🔖 Save</button>
+                            <button class="action-btn share-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Post 2 -->
+                <div class="post-card">
+                    <div class="post-voting">
+                        <button class="vote-btn upvote" data-post-id="2" data-type="upvote">▲</button>
+                        <span class="vote-count">8</span>
+                        <button class="vote-btn downvote" data-post-id="2" data-type="downvote">▼</button>
+                    </div>
+                    
+                    <div class="post-main">
+                        <div class="post-header">
+                            <img src="images/avatar.png" alt="User Avatar" />
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <strong>Jane Smith</strong>
+                                    <span class="org-name">• Student Council</span>
+                                </div>
+                                <div class="post-info">
+                                    <span class="category-tag">Announcement</span>
+                                    <span class="post-type">Memo</span>
+                                    <span class="post-date">December 14, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <h3>New Library Hours Effective January 2025</h3>
+                            <p>Starting January 2025, the university library will extend its operating hours to better serve our students. The new schedule will be Monday-Friday: 7:00 AM - 10:00 PM, Saturday-Sunday: 8:00 AM - 8:00 PM.</p>
+                        </div>
+
+                        <div class="post-actions">
+                            <button class="action-btn comment-btn">💬 5 Comments</button>
+                            <button class="action-btn save-btn" data-post-id="2">🔖 Save</button>
+                            <button class="action-btn share-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Post 3 -->
+                <div class="post-card">
+                    <div class="post-voting">
+                        <button class="vote-btn upvote active" data-post-id="3" data-type="upvote">▲</button>
+                        <span class="vote-count">23</span>
+                        <button class="vote-btn downvote" data-post-id="3" data-type="downvote">▼</button>
+                    </div>
+                    
+                    <div class="post-main">
+                        <div class="post-header">
+                            <img src="images/avatar.png" alt="User Avatar" />
+                            <div class="post-meta">
+                                <div class="post-author">
+                                    <strong>Mike Johnson</strong>
+                                    <span class="org-name">• Engineering Society</span>
+                                </div>
+                                <div class="post-info">
+                                    <span class="category-tag">Social</span>
+                                    <span class="post-type">Discussion</span>
+                                    <span class="post-date">December 13, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <h3>Study Group for Finals Week</h3>
+                            <p>Looking to form a study group for the upcoming finals. We'll be covering Mathematics, Physics, and Engineering subjects. Anyone interested can join us at the engineering building every evening from 6-9 PM.</p>
+                        </div>
+
+                        <div class="post-actions">
+                            <button class="action-btn comment-btn">💬 18 Comments</button>
+                            <button class="action-btn save-btn saved" data-post-id="3">🔖 Saved</button>
+                            <button class="action-btn share-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ORGANIZATIONS -->
+            <section class="orgs-section">
+                <h2>Organizations</h2>
+                <div class="orgs-list">
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Computer Science Society</h3>
+                        <p>Advancing technology and programming skills among CS students</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Student Council</h3>
+                        <p>Representing student interests and organizing campus activities</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Engineering Society</h3>
+                        <p>Building the future through engineering excellence</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                    <div class="org-card">
+                        <img src="images/profile.png" alt="Org Logo" />
+                        <h3>Arts & Culture Club</h3>
+                        <p>Promoting creativity and cultural awareness on campus</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Demo voting functionality
+        document.querySelectorAll('.vote-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const voteCountElement = this.parentElement.querySelector('.vote-count');
+                const upvoteBtn = this.parentElement.querySelector('.upvote');
+                const downvoteBtn = this.parentElement.querySelector('.downvote');
+                let currentCount = parseInt(voteCountElement.textContent);
+                
+                // Reset button states
+                upvoteBtn.classList.remove('active');
+                downvoteBtn.classList.remove('active');
+                
+                // Toggle vote
+                if (this.classList.contains('upvote')) {
+                    this.classList.add('active');
+                    voteCountElement.textContent = currentCount + 1;
+                } else {
+                    this.classList.add('active');
+                    voteCountElement.textContent = currentCount - 1;
+                }
+            });
+        });
+
+        // Demo save functionality
+        document.querySelectorAll('.save-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.classList.contains('saved')) {
+                    this.innerHTML = '🔖 Save';
+                    this.classList.remove('saved');
+                } else {
+                    this.innerHTML = '🔖 Saved';
+                    this.classList.add('saved');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
